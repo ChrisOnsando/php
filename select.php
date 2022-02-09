@@ -30,21 +30,4 @@ echo "No data found in the database";
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- ?>
+?>

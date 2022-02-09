@@ -13,12 +13,15 @@ if($data>0){
   echo "<h3>Table details</h3>";
 }
 
-$row = mysqli_fetch_array($result);
-while ($row) {
+while($row = mysqli_fetch_array($result)){
   // code...
-  $id=$row['id'];
-  $firstname=$row['firstname'];
-  $secondname=$row['secondname'];
+  echo "" . $id=$row['id'];
+echo "" .   $firstname=$row['firstname'];
+echo "" .   $secondname=$row['secondname'];
+echo "<a href='delete.php?id=".$row['id']."'><button>Delete</button></a>";
+echo "<a href='update.php?id=".$row['id']."'><button>Update</button></a>";
+echo "<hr>";
+
 }
 
 
@@ -26,7 +29,6 @@ while ($row) {
 echo "No data found in the database";
 
 }
-  ?>
 
 
 

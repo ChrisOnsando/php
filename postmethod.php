@@ -28,12 +28,12 @@ echo "<h3>please fill the form </h3>";
   <body>
     <form action="postmethod.php" method="post">
       <div>
-        <label for="First Name"></label>
+        <label>First Name</label>
         <input type="text" name="firstname"required>
       </div>
       <br>
       <div>
-        <label for="Second Name"></label>
+        <label>Second Name</label>
         <input type="text" name="secondname" required>
       </div>
       <br>

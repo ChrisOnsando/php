@@ -203,18 +203,18 @@
                                              <td>A</td>
                                          </tr>
                                          <tr>
-                                             <td>Lucy Heels</td>
+                                             <td>Rosemary Ngaara</td>
                                              <td>Female</td>
                                              <td>B</td>
                                          </tr>
                                          <tr>
-                                             <td>Mark Zulu</td>
+                                             <td>Nemwel Onsando</td>
                                              <td>Male</td>
                                              <td>B</td>
                                          </tr>
                                          <tr>
-                                             <td>Hellena Kui</td>
-                                             <td>Female</td>
+                                             <td>Chris Macho</td>
+                                             <td>male</td>
                                              <td>B</td>
                                          </tr>
 

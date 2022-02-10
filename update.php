@@ -4,7 +4,7 @@ include "connect.php";
 if (isset($_POST["submit"]) and !empty($_POST["id"])){
 
 $id=$_POST["id"];
-$up_firstname=$_POST["fisrtname"];
+$up_firstname=$_POST["firstname"];
 $up_secondname=$_POST["secondname"];
 
 $up_sql="UPDATE `details` SET `firstname`='$up_firstname',`secondname`='$up_secondname' WHERE id=$id";
@@ -20,7 +20,7 @@ if ($up_result){
 
 }else {
   // code...
-if (isset($_POST["submit"]) and !empty($_GET["id"])){
+if (isset($_GET["id"]) and !empty($_GET["id"])){
 
 $id= $_GET["id"];
 $sql="SELECT * FROM `details` WHERE id=$id";
@@ -51,15 +51,17 @@ if ($result){
   <body>
     <h2>UPDATE THIS RECORD</h2>
     <form action="update.php" method="post">
-      <div>
+      
+    <div>
         <label> First Name </label>
-        <input type="text" name="firstname"value="<?php echo $firstname;?>"required>
+        <input type="text" name="firstname" value="<?php echo $firstname;?>"required>
       </div>
-      <br>
+     
       <div>
         <label> Second Name </label>
         <input type="text" name="secondname" value="<?php echo $secondname;?>"required>
       </div>
+     
       <div>
 <label>ID</label>
         <input type="text" name="id" value="<?php echo $_GET["id"];?>">

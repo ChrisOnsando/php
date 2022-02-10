@@ -415,27 +415,10 @@
                     <small>&copy; ChrisNemwel 2022 </small>
                 </div>
 
-
             </footer>
 
-
-
-
         </div>
-
-
-
     </div>
-
-
-
-
-
-
 </div>
-
-
-
-
 </body>
 </html>

@@ -56,7 +56,7 @@
                     <form action="handle_login.php" method="post">
                         <div class="row m-3">
                             <div class="col-sm-12">
-                            <input class="form-control rounded-pill" type="email" name="emailAddress" placeholder="Email Address" required>
+                            <input class="form-control rounded-pill" type="email" name="emailaddress" placeholder="Email Address" required>
                             </div>
                         </div>
                         <div class="row m-3">

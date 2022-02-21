@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION["loggedin"]) or $_SESSION["loggedin"]!==true){
+    header(header:"location:login.php");
+    exit();
+}
+include "header.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,99 +50,6 @@
     ></script>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-3 bg-primary ">
-            <ul class="nav flex-column">
-                <li class="nav-item navstyles">
-                    <i class="fa fa-ravelry fa-3x text-white"></i>
-                    <span class="h4 text-white"> ADMIN </span>
-                </li>
-                <hr>
-                <li class="nav-item navstyles">
-                    <a class="nav-link" href="#">
-                        <i class="fa fa-dashboard text-white "> </i>
-                        <span class="text-white">  Dashboard </span>
-                    </a>
-                </li>
-                <hr>
-                <li class="nav-item navstyles">
-                    <a class="nav-link" href="addstudent.php">
-                        <i class="fa fa-users text-white"> </i>
-                        <span class="text-white"> Participants </span>
-                    </a>
-                </li>
-                <li class="nav-item navstyles">
-                    <a class="nav-link" href="#">
-                        <i class="fa fa-cogs text-white "> </i>
-                        <span class="text-white">  Components </span>
-                    </a>
-                </li>
-                <hr>
-                <li class="nav-item navstyles">
-                    <a class="nav-link" href="documents.php">
-                        <i class="fa fa-file text-white"> </i>
-                        <span class="text-white"> Documents </span>
-                    </a>
-                </li>
-                <li class="nav-item navstyles">
-                    <a class="nav-link" href="#">
-                        <i class="fa fa-line-chart text-white"> </i>
-                        <span class="text-white">  Charts </span>
-                    </a>
-                </li>
-                <hr>
-                <li class="nav-item navstyles">
-                    <a class="nav-link" href="#">
-                        <i class="fa fa-wrench text-white"> </i>
-                        <span class="text-white"> Settings </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="col-9 bg-light">
-            <div class="row bg-white">
-                <div class="col-7">
-                    <nav class="navbar navbar-light">
-                        <div class="container-fluid">
-                            <form class="d-flex">
-                                <input class="col-6 form-control me-2" type="search" placeholder="Search here ..." aria-label="Search">
-                                <button class="btn btn-outline-primary" type="submit">Search</button>
-                            </form>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-5">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <div class="container-fluid">
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="fa fa-bell fa-lg "></i>
-                                            <span class="badge rounded-pill bg-danger">5+</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="fa fa-envelope fa-lg"></i>
-                                            <span class="badge rounded-pill bg-danger">35+</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            Chris Nemwel |
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="images/male_avatar.svg" alt="" class="rounded-circle float-end" width="50" height="50">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
             <div class="row m-2">
                 <div class="col-6">
                     <h3 class="grey">Dashboard</h3>
@@ -196,7 +111,7 @@
                 </div>
             </div>
              <div class="row m-2">
-                 <form action="handle_addstudent.php" method="post" enctype="multipart/form-datas">
+                 <form action="handle_addstudent.php" method="post" enctype="multipart/form-data">
                      <div class="row m-2 p-2">
                          <div class="col-md-6">
                              <label class="form-label grey">Full Name</label>
